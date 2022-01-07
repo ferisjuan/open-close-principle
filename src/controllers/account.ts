@@ -1,6 +1,6 @@
 import { EmployeeModel } from '../models/employee'
-import { IApplicantModel } from '../interfaces/Iapplicant'
 import { IAccounts } from '../interfaces/Iaccount'
+import { IApplicantModel } from '../Iapplicant'
 
 export class Accounts implements IAccounts {
     public create(person: IApplicantModel): EmployeeModel {

@@ -1,6 +1,6 @@
-import { EmployeeModel } from "../models/employee";
-import { IApplicantModel } from "./Iapplicant";
+import { IApplicantModel } from '../Iapplicant';
+import { EmployeeModel } from '../models/employee'
 
 export interface IAccounts {
-    create(person: IApplicantModel): EmployeeModel;
+    create(person: IApplicantModel): EmployeeModel
 }
