@@ -1,5 +1,6 @@
 import { IApplicantModel } from './Iapplicant'
 import { EmployeeModel } from './models/employee'
+import { ExecutiveModel } from './models/executive'
 import { ManagerModel } from './models/manager'
 import { PersonModel } from './models/person'
 
@@ -8,7 +9,7 @@ class Program {
         const applicants: IApplicantModel[] = [
             new PersonModel('John', 'Doe'),
             new ManagerModel('Jane', 'Doe'),
-            new PersonModel('John', 'Smith'),
+            new ExecutiveModel('John', 'Smith'),
         ]
 
         const employees: EmployeeModel[] = []
