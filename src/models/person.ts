@@ -1,4 +1,5 @@
-export class PersonModel {
+import { IApplicantModel } from '../interfaces/applicant'
+export class PersonModel implements IApplicantModel {
     public FirstName: string
     public LastName: string
 

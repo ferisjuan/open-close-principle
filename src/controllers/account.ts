@@ -1,8 +1,8 @@
-import { PersonModel } from '../models/person'
 import { EmployeeModel } from '../models/employee'
+import { IApplicantModel } from '../interfaces/applicant'
 
 export class Accounts {
-    public create(person: PersonModel): EmployeeModel {
+    public create(person: IApplicantModel): EmployeeModel {
         const output: EmployeeModel = new EmployeeModel()
 
         output.FirstName = person.FirstName
