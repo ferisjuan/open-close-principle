@@ -1,19 +1,20 @@
 import { IApplicantModel } from './Iapplicant'
 import { EmployeeModel } from './models/employee'
+import { ManagerModel } from './models/manager'
 import { PersonModel } from './models/person'
 
 class Program {
     static main() {
         const applicants: IApplicantModel[] = [
             new PersonModel('John', 'Doe'),
-            new PersonModel('Jane', 'Doe'),
+            new ManagerModel('Jane', 'Doe'),
             new PersonModel('John', 'Smith'),
         ]
 
         const employees: EmployeeModel[] = []
 
         applicants.forEach(person => {
-            employees.push(person.AccountProcessor.create(person))
+            employees.push(person.AccountProcessor.Create(person))
         })
 
         employees.forEach(employee => {

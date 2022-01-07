@@ -1,8 +1,8 @@
-import { EmployeeModel } from '../models/employee'
-import { IAccounts } from '../interfaces/Iaccount'
-import { IApplicantModel } from '../Iapplicant'
+import { IApplicantModel } from '../Iapplicant';
+import { IAccounts } from '../interfaces/Iaccount';
+import { EmployeeModel } from '../models/employee';
 
-export class Accounts implements IAccounts {
+export class ManagerAccounts implements IAccounts{
     public Create(person: IApplicantModel): EmployeeModel {
         const output: EmployeeModel = new EmployeeModel()
 
@@ -10,7 +10,9 @@ export class Accounts implements IAccounts {
         output.LastName = person.LastName
         output.Email = `${person.FirstName.charAt(0)}.${
             person.LastName
-        }@ocp.com`
+        }@ocpcorp.com`
+
+        output.isManager = true
 
         return output
     }
