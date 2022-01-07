@@ -4,11 +4,11 @@ import { IApplicantModel } from '../Iapplicant'
 export class PersonModel implements IApplicantModel {
     public FirstName: string
     public LastName: string
-    public AccountProccessor: IAccounts
+    public AccountProcessor: IAccounts
 
     constructor(firstName = '', lastName = '') {
         this.FirstName = firstName
         this.LastName = lastName
-        this.AccountProccessor = new Accounts()
+        this.AccountProcessor = new Accounts()
     }
 }

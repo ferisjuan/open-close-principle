@@ -1,20 +1,19 @@
-import { Accounts } from './controllers/account'
+import { IApplicantModel } from './Iapplicant'
 import { EmployeeModel } from './models/employee'
 import { PersonModel } from './models/person'
 
 class Program {
     static main() {
-        const applicants: PersonModel[] = [
+        const applicants: IApplicantModel[] = [
             new PersonModel('John', 'Doe'),
             new PersonModel('Jane', 'Doe'),
             new PersonModel('John', 'Smith'),
         ]
 
         const employees: EmployeeModel[] = []
-        const accountProcessor = new Accounts()
 
         applicants.forEach(person => {
-            employees.push(accountProcessor.create(person))
+            employees.push(person.AccountProcessor.create(person))
         })
 
         employees.forEach(employee => {
